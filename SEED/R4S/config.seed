@@ -172,6 +172,7 @@ CONFIG_LIBCURL_OPENSSL=y
 ### Video Support ###
 CONFIG_PACKAGE_kmod-drm-panfrost=y
 CONFIG_PACKAGE_kmod-multimedia-input=y
+CONFIG_PACKAGE_kmod-gpu-lima=y
 
 ### DOCKER ###
 CONFIG_PACKAGE_luci-app-dockerman=y
