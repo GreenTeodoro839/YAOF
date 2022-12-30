@@ -4,8 +4,13 @@ latest_release="$(curl -s https://github.com/openwrt/openwrt/tags | grep -Eo "v[
 git clone --single-branch -b ${latest_release} https://github.com/openwrt/openwrt openwrt_release
 git clone --single-branch -b openwrt-22.03 https://github.com/openwrt/openwrt openwrt
 cd openwrt
+# rockchip: add drm and lima gpu driver
 wget https://github.com/immortalwrt/immortalwrt/commit/c10101fc0cf186196a354a91a75bf2856630dd68.patch
+wget https://github.com/coolsnowwolf/lede/raw/757e42d70727fe6b937bb31794a9ad4f5ce98081/target/linux/rockchip/config-default -NP target/linux/rockchip/
+wget https://github.com/coolsnowwolf/lede/commit/f341ef96fe4b509a728ba1281281da96bac23673.patch
+git apply f341ef96fe4b509a728ba1281281da96bac23673.patch
 git apply c10101fc0cf186196a354a91a75bf2856630dd68.patch
+rm f341ef96fe4b509a728ba1281281da96bac23673.patch
 rm c10101fc0cf186196a354a91a75bf2856630dd68.patch
 cd ..
 rm -f ./openwrt/include/version.mk
