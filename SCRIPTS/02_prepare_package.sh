@@ -46,6 +46,8 @@ wget -P target/linux/generic/hack-5.10/ https://github.com/immortalwrt/immortalw
 cp -rf ../PATCH/BBRv2/kernel/* ./target/linux/generic/hack-5.10/
 cp -rf ../PATCH/BBRv2/openwrt/package ./
 wget -qO - https://github.com/openwrt/openwrt/commit/7db9763.patch | patch -p1
+#GPU
+wget -qO- https://github.com/immortalwrt/immortalwrt/commit/c10101fc0cf186196a354a91a75bf2856630dd68.patch | patch -p1
 # SSL
 rm -rf ./package/libs/mbedtls
 svn export https://github.com/immortalwrt/immortalwrt/branches/master/package/libs/mbedtls package/libs/mbedtls
