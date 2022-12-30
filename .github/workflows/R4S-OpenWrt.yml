@@ -1,6 +1,7 @@
 name: R4S-OpenWrt
 
 on:
+workflow_dispatch
 #  schedule:
 #    - cron: 5 6 * * 0
   watch:
