@@ -170,9 +170,20 @@ CONFIG_LIBCURL_OPENSSL=y
 # CONFIG_LIBCURL_NOSSL is not set
 
 ### Video Support ###
+CONFIG_PACKAGE_kmod-backlight=y
+CONFIG_PACKAGE_kmod-drm=y
+CONFIG_PACKAGE_kmod-drm-ttm=y
+CONFIG_PACKAGE_kmod-drm-kms-helper=y
+CONFIG_PACKAGE_kmod-drm-rockchip=y
 CONFIG_PACKAGE_kmod-drm-panfrost=y
-CONFIG_PACKAGE_kmod-multimedia-input=y
+CONFIG_PACKAGE_kmod-fb=y
+CONFIG_PACKAGE_kmod-fb-cfb-copyarea=y
+CONFIG_PACKAGE_kmod-fb-cfb-fillrect=y
+CONFIG_PACKAGE_kmod-fb-cfb-imgblt=y
+CONFIG_PACKAGE_kmod-fb-sys-fops=y
+CONFIG_PACKAGE_kmod-fb-sys-ram=y
 CONFIG_PACKAGE_kmod-gpu-lima=y
+CONFIG_PACKAGE_kmod-multimedia-input=y
 
 ### DOCKER ###
 CONFIG_PACKAGE_luci-app-dockerman=y
